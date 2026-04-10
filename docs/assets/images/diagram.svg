@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" class="mode-ev">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1014"/>
+      <stop offset="100%" stop-color="#141920"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .label { font: 700 18px Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #f4ede1; letter-spacing: 0.03em; }
+      .sub { font: 500 14px Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #aba395; }
+      .shell { fill: url(#bgGradient); stroke: rgba(255,255,255,0.08); stroke-width: 2; }
+      .module { fill: rgba(255,255,255,0.04); stroke: rgba(255,255,255,0.09); stroke-width: 2; rx: 24; }
+      .wheel { fill: #e7ddcf; opacity: 0.12; }
+      .connector { fill: none; stroke: rgba(255,255,255,0.1); stroke-width: 12; stroke-linecap: round; }
+      .flow { fill: none; stroke-width: 12; stroke-linecap: round; stroke-linejoin: round; opacity: 0.14; transition: opacity 220ms ease, stroke-width 220ms ease; }
+      .flow-electric { stroke: #4da3ff; }
+      .flow-gas { stroke: #ff8a3d; }
+      .flow-neutral { stroke: #d6b474; }
+      .arrow { fill: none; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; opacity: 0.14; transition: opacity 220ms ease, stroke-width 220ms ease; }
+      .legend { fill: rgba(255,255,255,0.04); stroke: rgba(255,255,255,0.08); stroke-width: 1.5; rx: 18; }
+      .legend-line { stroke-width: 6; stroke-linecap: round; }
+      .legend-text { font: 600 13px Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #d4caba; }
+      .mode-ev .ev-only,
+      .mode-ev .both,
+      .mode-hybrid .ev-only,
+      .mode-hybrid .gas-only,
+      .mode-hybrid .both,
+      .mode-performance .ev-only,
+      .mode-performance .gas-only,
+      .mode-performance .both { opacity: 1; }
+      .mode-performance .flow,
+      .mode-performance .arrow { filter: url(#glow); }
+      .mode-performance .flow { stroke-width: 16; }
+      .mode-performance .arrow { stroke-width: 7; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="640" fill="#0c0f13"/>
+  <rect width="1200" height="640" fill="url(#bgGradient)"/>
+  <rect x="50" y="70" width="1100" height="500" rx="40" class="shell"/>
+
+  <circle cx="260" cy="495" r="54" class="wheel"/>
+  <circle cx="940" cy="495" r="54" class="wheel"/>
+
+  <rect x="116" y="228" width="208" height="130" rx="28" class="module"/>
+  <text x="220" y="278" text-anchor="middle" class="label">Front Engine</text>
+  <text x="220" y="306" text-anchor="middle" class="sub">2.0L Turbo I4</text>
+
+  <rect x="404" y="232" width="188" height="122" rx="28" class="module"/>
+  <text x="498" y="282" text-anchor="middle" class="label">Generator</text>
+  <text x="498" y="310" text-anchor="middle" class="sub">Engine-assisted charging</text>
+
+  <rect x="476" y="398" width="248" height="112" rx="28" class="module"/>
+  <text x="600" y="442" text-anchor="middle" class="label">Battery Pack</text>
+  <text x="600" y="470" text-anchor="middle" class="sub">18 kWh center tunnel pack</text>
+
+  <rect x="836" y="228" width="208" height="130" rx="28" class="module"/>
+  <text x="940" y="278" text-anchor="middle" class="label">Rear Motor</text>
+  <text x="940" y="306" text-anchor="middle" class="sub">Electric rear drive</text>
+
+  <rect x="494" y="118" width="212" height="72" rx="22" class="module"/>
+  <text x="600" y="163" text-anchor="middle" class="label">Charge Port</text>
+
+  <path d="M324 292 H404" class="connector"/>
+  <path d="M592 292 H836" class="connector"/>
+  <path d="M220 358 V430 H498" class="connector"/>
+  <path d="M940 358 V430 H724" class="connector"/>
+
+  <path d="M600 190 V398" class="flow flow-electric both"/>
+  <path d="M600 190 V398 m-12 -18 l12 18 l12 -18" class="arrow flow-electric both"/>
+
+  <path d="M220 292 H498" class="flow flow-gas gas-only"/>
+  <path d="M476 280 l22 12 l-22 12" class="arrow flow-gas gas-only"/>
+
+  <path d="M498 314 V398 H558" class="flow flow-gas gas-only"/>
+  <path d="M546 398 l12 -18 l12 18" class="arrow flow-gas gas-only"/>
+
+  <path d="M642 430 H940 V358" class="flow flow-electric ev-only both"/>
+  <path d="M928 376 l12 -18 l12 18" class="arrow flow-electric ev-only both"/>
+
+  <path d="M896 430 H724" class="flow flow-electric both"/>
+  <path d="M736 418 l-12 12 l12 12" class="arrow flow-electric both"/>
+
+  <path d="M824 292 H940" class="flow flow-gas gas-only"/>
+  <path d="M928 280 l12 12 l-12 12" class="arrow flow-gas gas-only"/>
+
+  <path d="M950 430 H724" class="flow flow-electric ev-only both"/>
+  <path d="M736 418 l-12 12 l12 12" class="arrow flow-electric ev-only both"/>
+
+  <path d="M204 228 V166 H418" class="flow flow-neutral gas-only"/>
+  <path d="M406 154 l12 12 l-12 12" class="arrow flow-neutral gas-only"/>
+  <text x="188" y="154" class="sub">Front wheels</text>
+  <text x="904" y="154" class="sub">Rear wheels</text>
+
+  <path d="M940 228 V166 H726" class="flow flow-electric ev-only both"/>
+  <path d="M738 154 l-12 12 l12 12" class="arrow flow-electric ev-only both"/>
+
+  <path d="M111 492 H206" class="flow flow-gas gas-only"/>
+  <path d="M194 480 l12 12 l-12 12" class="arrow flow-gas gas-only"/>
+
+  <path d="M989 492 H1084" class="flow flow-electric ev-only both"/>
+  <path d="M1072 480 l12 12 l-12 12" class="arrow flow-electric ev-only both"/>
+
+  <rect x="866" y="82" width="224" height="124" class="legend"/>
+  <line x1="894" y1="118" x2="934" y2="118" class="legend-line" stroke="#4da3ff"/>
+  <text x="950" y="123" class="legend-text">Electric flow</text>
+  <line x1="894" y1="150" x2="934" y2="150" class="legend-line" stroke="#ff8a3d"/>
+  <text x="950" y="155" class="legend-text">Combustion flow</text>
+  <line x1="894" y1="182" x2="934" y2="182" class="legend-line" stroke="#d6b474"/>
+  <text x="950" y="187" class="legend-text">Mechanical link</text>
+
+  <text x="600" y="556" text-anchor="middle" class="label">Independent systems. Unified control.</text>
+</svg>
