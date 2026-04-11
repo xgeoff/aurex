@@ -96,7 +96,7 @@ img {
 }
 
 .hero-copy {
-  margin-top: 5rem;
+  top: 8.25rem;
   padding: 0 2rem;
   text-align: center;
 }
@@ -551,7 +551,7 @@ h2 {
   }
 
   .hero-copy {
-    margin-top: 6rem;
+    top: 6.75rem;
   }
 
   .specs-groups {
