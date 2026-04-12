@@ -31,12 +31,416 @@ img {
 .container {
   width: min(calc(100% - 3rem), var(--max-width));
   max-width: var(--max-width);
+  margin: 0 auto;
 }
 
 .site-main {
   min-height: 100vh;
   overflow: hidden;
   background: var(--background);
+}
+
+.brand-page {
+  background: #0a0a0a;
+}
+
+.brand-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.4rem 3.2rem;
+}
+
+.brand-nav-mark {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.brand-nav-mark img {
+  width: 2.8rem;
+  height: 2.8rem;
+  object-fit: contain;
+  opacity: 0.7;
+}
+
+.brand-nav-mark span,
+.brand-nav-links a {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.brand-nav-mark span {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.2rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.brand-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.brand-nav-links a {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 1.15rem;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.5s ease;
+}
+
+.brand-nav-links a:hover,
+.brand-nav-links a:focus {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.brand-hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2.4rem;
+  text-align: center;
+}
+
+.brand-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #0a0a0a;
+}
+
+.brand-hero-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brand-logo {
+  width: 9.2rem;
+  height: 9.2rem;
+  object-fit: contain;
+  opacity: 0.6;
+  margin: 0 auto 3.6rem;
+}
+
+.brand-page h1,
+.brand-page h2,
+.brand-page h3 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 300;
+}
+
+.brand-page h1 {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(4rem, 8.4vw, 9rem);
+  letter-spacing: 0.12em;
+  line-height: 1;
+}
+
+.brand-kicker {
+  margin: 2.6rem 0 0;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 1.05rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+}
+
+.brand-rule {
+  width: 6.4rem;
+  height: 1px;
+  margin-top: 4.6rem;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.brand-tagline {
+  margin: 1.8rem 0 0;
+  color: rgba(255, 255, 255, 0.3);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 2.4rem;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.brand-scroll-cue {
+  position: absolute;
+  left: 50%;
+  bottom: 4rem;
+  transform: translateX(-50%);
+}
+
+.brand-scroll-line {
+  width: 1px;
+  height: 4rem;
+  background: rgba(255, 255, 255, 0.2);
+  animation: brandScroll 2s ease-in-out infinite;
+  transform-origin: top;
+}
+
+.brand-statement {
+  padding: 16rem 0;
+  text-align: center;
+}
+
+.brand-statement-copy {
+  max-width: 96rem;
+}
+
+.brand-statement-copy > div:first-child p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(3rem, 5vw, 6rem);
+  font-weight: 300;
+  line-height: 1.12;
+}
+
+.brand-statement-copy span {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.brand-statement-sub {
+  max-width: 44rem;
+  margin: 5.6rem auto 0;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 1.15rem;
+  letter-spacing: 0.18em;
+  line-height: 1.9;
+  text-transform: uppercase;
+}
+
+.brand-model-card {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+}
+
+.brand-model-media {
+  position: absolute;
+  inset: 0;
+}
+
+.brand-model-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.brand-model-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3) 55%, rgba(0, 0, 0, 0.1)),
+    linear-gradient(to right, rgba(0, 0, 0, 0.4), transparent 55%);
+}
+
+.brand-model-copy {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  max-width: 54rem;
+  padding: 4.8rem 4.8rem 5.6rem;
+}
+
+.brand-model-descriptor,
+.brand-philosophy-kicker,
+.brand-compare-type,
+.brand-close-copy p {
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 1rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.brand-model-copy h2 {
+  margin: 0 0 1.6rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(7rem, 8vw, 11rem);
+  line-height: 0.95;
+}
+
+.brand-model-tagline {
+  max-width: 28rem;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.6rem;
+  line-height: 1.75;
+}
+
+.brand-model-rule {
+  width: 4.8rem;
+  height: 1px;
+  margin-top: 3.8rem;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.brand-model-link,
+.brand-compare-link,
+.alpha-back a {
+  display: inline-block;
+  margin-top: 2.8rem;
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.5s ease, border-color 0.5s ease;
+}
+
+.brand-model-link:hover,
+.brand-model-link:focus,
+.brand-compare-link:hover,
+.brand-compare-link:focus,
+.alpha-back a:hover,
+.alpha-back a:focus {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.brand-model-link.is-muted,
+.brand-compare-link.is-muted {
+  color: rgba(255, 255, 255, 0.22);
+}
+
+.brand-interstitial {
+  padding: 12rem 0;
+  text-align: center;
+}
+
+.brand-interstitial-line {
+  width: 1px;
+  height: 6.4rem;
+  margin: 0 auto 4.8rem;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.brand-interstitial p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 1rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.brand-philosophy {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14rem 0;
+  text-align: center;
+}
+
+.brand-philosophy-copy {
+  max-width: 76rem;
+}
+
+.brand-philosophy-copy h2 {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: clamp(4rem, 6vw, 7rem);
+  line-height: 1.08;
+}
+
+.brand-philosophy-copy h2 span {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.brand-philosophy-body {
+  max-width: 48rem;
+  margin: 4.8rem auto 0;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 1.6rem;
+  line-height: 1.85;
+}
+
+.brand-compare {
+  padding: 12rem 0;
+}
+
+.brand-compare-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.brand-compare-card {
+  background: #0a0a0a;
+  padding: 4.8rem 4.8rem 5.2rem;
+}
+
+.brand-compare-card h3 {
+  margin: 0 0 3.8rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 6rem;
+  line-height: 0.95;
+}
+
+.brand-compare-list {
+  padding-top: 3.2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.brand-compare-list > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1.6rem;
+  margin-bottom: 2.4rem;
+}
+
+.brand-compare-list span {
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 0.95rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.brand-compare-list strong {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: right;
+}
+
+.brand-close {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.brand-close-logo {
+  width: 6.4rem;
+  height: 6.4rem;
+  object-fit: contain;
+  opacity: 0.2;
+  margin: 0 auto 2.8rem;
+}
+
+.brand-close-copy h2 {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.15);
+  font-size: clamp(5rem, 7vw, 8rem);
+  letter-spacing: 0.12em;
+}
+
+.brand-close-copy p {
+  margin: 1.8rem 0 0;
 }
 
 .hero,
@@ -99,6 +503,10 @@ img {
   top: 8.25rem;
   padding: 0 2rem;
   text-align: center;
+}
+
+.alpha-back {
+  margin: 0 0 2rem;
 }
 
 h1,
@@ -531,17 +939,38 @@ h2 {
 }
 
 @media (max-width: 900px) {
+  .brand-nav {
+    padding: 2rem 2.2rem;
+  }
+
+  .brand-nav-links {
+    display: none;
+  }
+
   .container,
   .performance-grid,
-  .quiet-copy {
+  .quiet-copy,
+  .brand-compare-grid {
     width: min(calc(100% - 2.4rem), var(--max-width));
   }
 
   .presence-grid,
   .performance-grid,
-  .detail-grid {
+  .detail-grid,
+  .brand-compare-grid {
     grid-template-columns: 1fr;
     gap: 4rem;
+  }
+
+  .brand-model-copy,
+  .brand-compare-card {
+    padding: 3rem 2.4rem 3.6rem;
+  }
+
+  .brand-statement,
+  .brand-philosophy,
+  .brand-compare {
+    padding: 8rem 0;
   }
 
   .presence-media {
@@ -569,6 +998,20 @@ h2 {
 }
 
 @media (max-width: 640px) {
+  .brand-logo {
+    width: 7.2rem;
+    height: 7.2rem;
+  }
+
+  .brand-page h1 {
+    font-size: 4.8rem;
+  }
+
+  .brand-model-copy h2,
+  .brand-compare-card h3 {
+    font-size: 4.8rem;
+  }
+
   h1 {
     font-size: 4.6rem;
     letter-spacing: 0.06em;
@@ -593,6 +1036,15 @@ h2 {
     font-size: 2.8rem;
   }
 
+  .brand-philosophy-copy h2 {
+    font-size: 3.6rem;
+  }
+
+  .brand-philosophy-body,
+  .brand-model-tagline {
+    font-size: 1.35rem;
+  }
+
   .specs-hero-copy {
     padding-bottom: 5rem;
     padding-left: 2.4rem;
@@ -601,5 +1053,18 @@ h2 {
 
   .spec-group h3 {
     font-size: 2.4rem;
+  }
+}
+
+@keyframes brandScroll {
+  0%,
+  100% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+
+  50% {
+    transform: scaleY(1);
+    transform-origin: top;
   }
 }
