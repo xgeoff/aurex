@@ -369,12 +369,17 @@ h2 {
   min-height: 72svh;
   display: flex;
   align-items: flex-end;
+  overflow: hidden;
 }
 
 .specs-hero-media,
 .specs-hero-overlay {
   position: absolute;
-  inset: 0;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
 }
 
 .specs-hero-media img {
@@ -393,6 +398,8 @@ h2 {
   position: relative;
   z-index: 1;
   padding-bottom: 7rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 
 .specs-back {
@@ -426,6 +433,8 @@ h2 {
 .specs-layout {
   display: grid;
   gap: 5rem;
+  max-width: 1080px;
+  margin: 0 auto;
 }
 
 .specs-intro {
@@ -586,6 +595,8 @@ h2 {
 
   .specs-hero-copy {
     padding-bottom: 5rem;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
   }
 
   .spec-group h3 {
