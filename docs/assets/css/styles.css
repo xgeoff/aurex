@@ -430,6 +430,7 @@ img {
   font-size: 2rem;
   font-weight: 300;
   text-align: right;
+  text-wrap: balance;
 }
 
 .brand-close {
@@ -998,6 +999,10 @@ body:has(img[src="assets/images/tau-interior.png"]) .quiet-section {
     padding: 3rem 2.4rem 3.6rem;
   }
 
+  .brand-model-copy {
+    max-width: 100%;
+  }
+
   .brand-statement,
   .brand-philosophy,
   .brand-compare {
@@ -1023,6 +1028,10 @@ body:has(img[src="assets/images/tau-interior.png"]) .quiet-section {
     top: 6.75rem;
   }
 
+  #tau.brand-model-card {
+    min-height: 105svh;
+  }
+
   .specs-groups {
     grid-template-columns: 1fr;
   }
@@ -1041,6 +1050,14 @@ body:has(img[src="assets/images/tau-interior.png"]) .quiet-section {
   .brand-model-copy h2,
   .brand-compare-card h3 {
     font-size: 4.8rem;
+  }
+
+  .brand-model-copy {
+    padding: 2.4rem 1.8rem 3rem;
+  }
+
+  .brand-model-tagline {
+    max-width: none;
   }
 
   h1 {
@@ -1076,6 +1093,52 @@ body:has(img[src="assets/images/tau-interior.png"]) .quiet-section {
     font-size: 1.35rem;
   }
 
+  .brand-compare-card {
+    padding: 2.8rem 1.8rem 3.2rem;
+  }
+
+  .brand-compare-list > div {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .brand-compare-list strong {
+    font-size: 1.7rem;
+    text-align: left;
+  }
+
+  .brand-compare-separator {
+    margin: 2.6rem 0 2.2rem;
+  }
+
+  .performance-grid {
+    gap: 2.8rem;
+  }
+
+  .stat-value {
+    font-size: 4.8rem;
+  }
+
+  .specs-content {
+    padding: 5rem 0 7rem;
+  }
+
+  .specs-layout {
+    gap: 3.5rem;
+  }
+
+  .specs-intro p,
+  .spec-item dd,
+  .key-list li {
+    font-size: 1rem;
+  }
+
+  .key-list {
+    padding-left: 1.2rem;
+  }
+
   .specs-hero-copy {
     padding-bottom: 5rem;
     padding-left: 2.4rem;
@@ -1084,6 +1147,73 @@ body:has(img[src="assets/images/tau-interior.png"]) .quiet-section {
 
   .spec-group h3 {
     font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container,
+  .performance-grid,
+  .quiet-copy,
+  .brand-compare-grid {
+    width: min(calc(100% - 1.8rem), var(--max-width));
+  }
+
+  .brand-nav {
+    padding: 1.6rem 1.2rem;
+  }
+
+  .brand-nav-mark {
+    gap: 0.8rem;
+  }
+
+  .brand-nav-mark span {
+    font-size: 0.9rem;
+    letter-spacing: 0.18em;
+  }
+
+  .brand-statement-copy > div:first-child p,
+  .brand-philosophy-copy h2,
+  .statement-copy p,
+  .philosophy-copy p {
+    text-wrap: balance;
+  }
+
+  .brand-page h1,
+  h1 {
+    font-size: 4rem;
+  }
+
+  .brand-kicker,
+  .hero-kicker,
+  .brand-statement-sub,
+  .brand-model-descriptor,
+  .brand-compare-type,
+  .brand-close-copy p,
+  .stat-label,
+  .close-link,
+  .specs-kicker,
+  .specs-back {
+    letter-spacing: 0.14em;
+  }
+
+  .brand-tagline {
+    font-size: 2rem;
+  }
+
+  .brand-model-copy h2,
+  .brand-compare-card h3,
+  .close-copy h2 {
+    font-size: 4rem;
+  }
+
+  .brand-compare-list span,
+  .spec-item dt {
+    letter-spacing: 0.12em;
+  }
+
+  .specs-hero-copy {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
   }
 }
 
