@@ -237,6 +237,15 @@ img {
   object-fit: cover;
 }
 
+#tau .brand-model-media img {
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+#tau.brand-model-card {
+  min-height: 120svh;
+}
+
 .brand-model-overlay {
   position: absolute;
   inset: 0;
@@ -401,6 +410,13 @@ img {
   margin-bottom: 2.4rem;
 }
 
+.brand-compare-separator {
+  width: 100%;
+  height: 1px;
+  margin: 3.6rem 0 3.2rem;
+  background: rgba(255, 255, 255, 0.08);
+}
+
 .brand-compare-list span {
   color: rgba(255, 255, 255, 0.25);
   font-size: 0.95rem;
@@ -489,6 +505,10 @@ img {
 
 .quiet-overlay {
   background: linear-gradient(to top, #0a0a0a, transparent, #0a0a0a);
+}
+
+body:has(img[src="assets/images/tau-interior.png"]) .quiet-overlay {
+  background: none;
 }
 
 .hero-copy,
@@ -587,8 +607,7 @@ h2 {
   height: 100%;
   object-fit: contain;
   object-position: center;
-  filter: grayscale(0.85);
-  opacity: 0.92;
+  opacity: 0.98;
 }
 
 .detail-section {
@@ -699,6 +718,11 @@ h2 {
 .quiet-section {
   display: flex;
   align-items: center;
+  margin-top: 5rem;
+}
+
+body:has(img[src="assets/images/tau-interior.png"]) .quiet-section {
+  margin-top: 12rem;
 }
 
 .quiet-copy {
@@ -764,6 +788,13 @@ h2 {
 .close-link:focus {
   color: rgba(255, 255, 255, 0.9);
   border-color: rgba(255, 255, 255, 0.4);
+}
+
+.close-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8rem;
 }
 
 .specs-page {
