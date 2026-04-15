@@ -1080,6 +1080,17 @@ body:has(img[src="assets/images/tau-interior.png"]) .quiet-section {
     object-position: center 32%;
   }
 
+  body:has(img[src="assets/images/hero.png"]) .hero-media,
+  body:has(img[src="assets/images/tau-front.png"]) .hero-media {
+    background: #050505;
+  }
+
+  body:has(img[src="assets/images/hero.png"]) .hero-media img,
+  body:has(img[src="assets/images/tau-front.png"]) .hero-media img {
+    object-fit: contain;
+    object-position: center center;
+  }
+
   .brand-model-tagline {
     max-width: none;
   }
@@ -1242,6 +1253,12 @@ body:has(img[src="assets/images/tau-interior.png"]) .quiet-section {
   .performance-media img,
   .quiet-media img {
     object-position: center 28%;
+  }
+
+  body:has(img[src="assets/images/hero.png"]) .hero-media img,
+  body:has(img[src="assets/images/tau-front.png"]) .hero-media img {
+    object-fit: contain;
+    object-position: center center;
   }
 
   .brand-model-copy h2,
