@@ -189,7 +189,7 @@ img {
 }
 
 .brand-statement {
-  padding: 16rem 0;
+  padding: 12rem 0;
   text-align: center;
 }
 
@@ -324,7 +324,7 @@ img {
 }
 
 .brand-interstitial {
-  padding: 12rem 0;
+  padding: 8rem 0;
   text-align: center;
 }
 
@@ -348,7 +348,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 14rem 0;
+  padding: 10rem 0;
   text-align: center;
 }
 
@@ -376,7 +376,7 @@ img {
 }
 
 .brand-compare {
-  padding: 12rem 0;
+  padding: 8rem 0;
 }
 
 .brand-compare-grid {
@@ -1007,7 +1007,7 @@ body:has(img[src="assets/images/tau-interior.png"]) .quiet-section {
   .brand-statement,
   .brand-philosophy,
   .brand-compare {
-    padding: 8rem 0;
+    padding: 6rem 0;
   }
 
   .presence-media {
