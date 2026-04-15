@@ -222,28 +222,29 @@ img {
 
 .brand-model-card {
   position: relative;
-  min-height: 100svh;
+  min-height: 112svh;
   overflow: hidden;
 }
 
 .brand-model-media {
   position: absolute;
   inset: 0;
+  background: #050505;
 }
 
 .brand-model-media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center center;
 }
 
 #tau .brand-model-media img {
-  object-fit: cover;
   object-position: center bottom;
 }
 
 #tau.brand-model-card {
-  min-height: 120svh;
+  min-height: 132svh;
 }
 
 .brand-model-overlay {
