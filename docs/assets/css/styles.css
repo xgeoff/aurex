@@ -1028,8 +1028,12 @@ body:has(img[src="assets/images/tau-interior.png"]) .quiet-section {
     top: 6.75rem;
   }
 
+  .brand-model-card {
+    min-height: 118svh;
+  }
+
   #tau.brand-model-card {
-    min-height: 105svh;
+    min-height: 128svh;
   }
 
   .specs-groups {
@@ -1054,6 +1058,26 @@ body:has(img[src="assets/images/tau-interior.png"]) .quiet-section {
 
   .brand-model-copy {
     padding: 2.4rem 1.8rem 3rem;
+  }
+
+  .brand-model-card {
+    min-height: 128svh;
+  }
+
+  #tau.brand-model-card {
+    min-height: 138svh;
+  }
+
+  .hero,
+  .performance-section,
+  .quiet-section {
+    min-height: 112svh;
+  }
+
+  .hero-media img,
+  .performance-media img,
+  .quiet-media img {
+    object-position: center 32%;
   }
 
   .brand-model-tagline {
@@ -1198,6 +1222,26 @@ body:has(img[src="assets/images/tau-interior.png"]) .quiet-section {
 
   .brand-tagline {
     font-size: 2rem;
+  }
+
+  .brand-model-card {
+    min-height: 136svh;
+  }
+
+  #tau.brand-model-card {
+    min-height: 146svh;
+  }
+
+  .hero,
+  .performance-section,
+  .quiet-section {
+    min-height: 118svh;
+  }
+
+  .hero-media img,
+  .performance-media img,
+  .quiet-media img {
+    object-position: center 28%;
   }
 
   .brand-model-copy h2,
